@@ -1,14 +1,23 @@
 <h1>Should I take an umbrella?</h1>
 
 <dl>
-  <dt>User's location</dt>
+  <dt>User location</dt>
   <dd> <%= @user_location %></dd>
 
   <dt>Latitude</dt>
   <dd> <%= @latitude %></dd>
 
   <dt>Longitude</dt>
-  <dd> <%= @longitude %></dd>
+  <dd> <%= @longitude.round(7) %></dd>
+
+  <dt>Current temperature</dt>
+  <dd><%= @current_temp %></dd>
+
+  <dt>Current summary</dt>
+  <dd><%= @current_summary %></dd>
+
+  <dt>Umbrella?</dt>
+  <dd><%= @umbrella == true ? "You might want to take an umbrella!" : "You probably won't need an umbrella." %></dd>
 </dl>
 
 <a href="/umbrella">Go Back</a>
